@@ -1,0 +1,64 @@
+{% extends "itstep/base.html" %}
+
+{% block heading %}Teacher List{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Ім'я</th>
+                <th>Призвіще</th>
+                <th>Email</th>
+                <th>Телефон</th>
+                <th>Дата нарождення</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+                <tr>
+                    <td>{{ teacher.first_name }}</td>
+
+                    <td>{{ teacher.last_name }}</td>
+
+                    <td>{{ teacher.email }}</td>
+                    <td>{{ teacher.phone }}</td>
+                    <td>{{ teacher.date_of_birth }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<br>
+{% endblock %}
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Teacher List</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Teacher List</h1>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>First Name</th>-->
+<!--                <th>Last Name</th>-->
+<!--                <th>Email</th>-->
+<!--                <th>Phone</th>-->
+<!--                <th>Date of Birth</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--            {% for teacher in teachers %}-->
+<!--                <tr>-->
+<!--                    <td>{{ teacher.first_name }}</td>-->
+<!--                    <td>{{ teacher.last_name }}</td>-->
+<!--                    <td>{{ teacher.email }}</td>-->
+<!--                    <td>{{ teacher.phone }}</td>-->
+<!--                    <td>{{ teacher.date_of_birth }}</td>-->
+<!--                </tr>-->
+<!--            {% endfor %}-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</body>-->
+<!--</html>-->

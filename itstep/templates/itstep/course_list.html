@@ -1,0 +1,62 @@
+{% extends "itstep/base.html" %}
+
+{% block heading %}Course List{% endblock %}
+
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Teacher</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courses %}
+                <tr>
+                    <td>{{ course.name }}</td>
+                    <td>{{ course.description }}</td>
+                    <td>{{ course.teacher }}</td>
+                    <td>{{ course.start }}</td>
+                    <td>{{ course.end }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<br>
+{% endblock %}
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Course List</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Course List</h1>-->
+<!--    <table>-->
+<!--        <thead>-->
+<!--            <tr>-->
+<!--                <th>Name</th>-->
+<!--                <th>Description</th>-->
+<!--                <th>Teacher</th>-->
+<!--                <th>Start Date</th>-->
+<!--                <th>End Date</th>-->
+<!--            </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--            {% for course in courses %}-->
+<!--                <tr>-->
+<!--                    <td>{{ course.name }}</td>-->
+<!--                    <td>{{ course.description }}</td>-->
+<!--                    <td>{{ course.teacher }}</td>-->
+<!--                    <td>{{ course.start }}</td>-->
+<!--                    <td>{{ course.end }}</td>-->
+<!--                </tr>-->
+<!--            {% endfor %}-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</body>-->
+<!--</html>-->

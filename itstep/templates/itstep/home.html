@@ -1,0 +1,13 @@
+{% extends "itstep/base.html" %}
+
+{% block title %}My Academy{% endblock %}
+{% block heading %}Welcome to My Academy{% endblock %}
+
+{% block content %}
+    <p>Please select a category:</p>
+    <ul>
+        <li><a href="{% url 'teacher_list' %}">Teachers</a></li>
+        <li><a href="{% url 'course_list' %}">Courses</a></li>
+        <li><a href="{% url 'student_list' %}">Students</a></li>
+    </ul>
+{% endblock %}
